@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/header';
-
+//import { Form } from 'react-advanced-form';
 //import Footer from '../components/footer';
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,7 +8,15 @@ import { faUser,faTrash,faEdit,faUpload, faUserCircle, faPencilAlt, faPencilRule
 
 
 class Profile extends Component {
-    
+  handleReset = () => {
+    this.form.reset() // resets "username" field to "admin"
+  }
+  
+ /* handleDelete = counterId =>
+  {
+     const counters = this.state.counters.filter(c => c.id !== counterId);
+    this.setState({counters: counters});
+    }*/
     render() {
      
         return(
@@ -40,7 +48,7 @@ class Profile extends Component {
 
                     <div class="row"  >
                       <div class="col-3">
-                          <button type="button" class="text-center" class="btn btn-primary btn-sm rounded-pill">Switch Mode</button>
+                          <button type="button" class="text-center" class="btn btn-primary btn-sm rounded-pill">Switch Role</button>
                     </div>
                     </div>
 
@@ -106,7 +114,7 @@ class Profile extends Component {
             </div>  {/* MAIN    ROW ENDS*/}
           </div>  {/* Container ENDS*/}
 
-         
+          <form>
           <div class =" border border-bottom border-dark col-10"  style={{marginLeft:"100px",marginBottom: "50px"}}/>
 
           <span class="text-primary offset-1" style={{marginLeft:'140px'}} ><b>Employer Profile</b></span>
@@ -116,8 +124,8 @@ class Profile extends Component {
           <div class =" border border-bottom border-dark col-10" style={{marginLeft:"110px"}}/>
         <div className="container align-items-center">
         <div className='mt-3'>
-       
-        <form class="inline">
+        
+                  <form class="inline">
           <div className="form-group">
             <label for="exampleInputHeadLine"><h6>Enter a Attractive Headline :</h6></label>
             <div  style={{marginRight: "200px"}}>
@@ -410,7 +418,221 @@ class Profile extends Component {
                             </div>
                   </div>
 {/*Projects end*/}
+{/*Mandatory skills */}
+<div className="container align-items-center">
+             <div className='mt-3  mb-3'>
+                <div className="border border-dark rounded-lg" >
+                <label class="mb-3 pl-3">I look for the following REQUIRED/MANDATORY </label>
+            <div className="container">
+            <div class="row" style={{marginTop:"-40px",marginLeft:"40px"}}>
+                  <div class="col">
+                    <label></label>
+                    </div>
+                  <div class="col">
+                     <label><h5>Required</h5></label>
+                    </div>
+                 <div class="col">
+                   <label> <h5>Years of </h5> </label>
+                    </div>
+                 
+                    <div class="col-1">
+                              <a href ="#" class="btn  "><FontAwesomeIcon icon={faPencilAlt}/></a>
+                    </div>
+             </div>
+             <div class="row">
+                  <div class="col">
+                  <label >skill from the candidates</label>
+          
+                    </div>
+                    <div class="col">
+                     <label><h5>Profiency (min 5/10) </h5></label>
+                    </div>
+                    <div class="col">
+                   <label> <h5>Experience </h5> </label>
+                    </div>
+                   
+                    <div class="col-1">
+                     <a href ="#" class="btn "><FontAwesomeIcon icon={faTrash}/></a>
+                    </div>
+             </div>
 
+<div class="row">
+                  <div class="col">
+                    <label>Python</label>
+                    </div>
+                  <div class="col">
+                  < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "7/10" ></input>
+                    </div>
+                 <div class="col">
+                 < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "3 years 0 months" ></input>
+                    </div>
+                   
+                    <div class="col-1">
+                     <a href ="#" class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
+                    </div>
+             </div>
+
+<div class="row ">
+                  <div class="col">
+                    <label>C++ </label>
+                    </div>
+                  <div class="col">
+                  < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "7/10" ></input>
+                    </div>
+                 <div class="col">
+                 < input type ="text" style={{border: "0px"}} class="text-primary"placeholder = "1 year 0 months" ></input>
+                    </div>
+                    
+                    <div class="col-1">
+                     <a href ="#" class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
+                    </div>
+                    <hr/>
+             </div>
+             <div class="row">
+                  <div class="col">
+                    <label>SQL</label>
+                    </div>
+                  <div class="col">
+                  < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "8/10" ></input>
+                    </div>
+                 <div class="col">
+                 < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "2 years 0 months" ></input>
+                    </div>
+                   
+                    <div class="col-1">
+                     <a href ="#" class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
+                    </div>
+             </div>
+             <div class="row">
+                  <div class="col">
+                    <label>R</label>
+                    </div>
+                  <div class="col">
+                  < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "8/10" ></input>
+                    </div>
+                 <div class="col">
+                 < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "2 years 0 months" ></input>
+                    </div>
+                   
+                    <div class="col-1">
+                     <a href ="#" class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
+                    </div>
+             </div>
+            
+
+          </div>
+               </div>
+            </div>
+        </div>
+{/*Mandatory skills ends*/}
+
+{/*skills good to have */}
+<div className="container align-items-center">
+             <div className='mt-3  mb-3'>
+                <div className="border border-dark rounded-lg" >
+                <label class=" p-2 ml-2">I look for the following GOOD TO HAVE </label>
+            <div className="container">
+            <div class="row" style={{marginTop:"-40px",marginLeft:"40px"}}>
+                  <div class="col">
+                    <label></label>
+                    </div>
+                  <div class="col">
+                     <label><h5>Required</h5></label>
+                    </div>
+                 <div class="col">
+                   <label> <h5>Years of </h5> </label>
+                    </div>
+                 
+                    <div class="col-1">
+                              <a href ="#" class="btn  "><FontAwesomeIcon icon={faPencilAlt}/></a>
+                    </div>
+             </div>
+             <div class="row">
+                  <div class="col">
+                  <label>skill from the candidates</label>
+          
+                    </div>
+                    <div class="col">
+                     <label><h5>Profiency (min 5/10) </h5></label>
+                    </div>
+                    <div class="col">
+                   <label> <h5>Experience </h5> </label>
+                    </div>
+                   
+                    <div class="col-1">
+                     <a href ="#" class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
+                    </div>
+             </div>
+
+<div class="row">
+                  <div class="col">
+                    <label>Python</label>
+                    </div>
+                  <div class="col">
+                  < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "7/10" ></input>
+                    </div>
+                 <div class="col">
+                 < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "3 years 0 months" ></input>
+                    </div>
+                   
+                    <div class="col-1">
+                     <a href ="#" class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
+                    </div>
+             </div>
+
+<div class="row ">
+                  <div class="col">
+                    <label>C++ </label>
+                    </div>
+                  <div class="col">
+                  < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "7/10" ></input>
+                    </div>
+                 <div class="col">
+                 < input type ="text" style={{border: "0px"}} class="text-primary"placeholder = "1 year 0 months" ></input>
+                    </div>
+                    
+                    <div class="col-1">
+                     <a href ="#" class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
+                    </div>
+                    <hr/>
+             </div>
+             <div class="row">
+                  <div class="col">
+                    <label>SQL</label>
+                    </div>
+                  <div class="col">
+                  < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "8/10" ></input>
+                    </div>
+                 <div class="col">
+                 < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "2 years 0 months" ></input>
+                    </div>
+                   
+                    <div class="col-1">
+                     <a href ="#" class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
+                    </div>
+             </div>
+             <div class="row">
+                  <div class="col">
+                    <label>R</label>
+                    </div>
+                  <div class="col">
+                  < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "8/10" ></input>
+                    </div>
+                 <div class="col">
+                 < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "2 years 0 months" ></input>
+                    </div>
+                   
+                    <div class="col-1">
+                     <a href ="#" class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
+                    </div>
+             </div>
+            
+
+          </div>
+               </div>
+            </div>
+        </div>
+{/*Skils good to have*/}
 {/*Langauage Background start*/}
 
 
@@ -568,7 +790,7 @@ class Profile extends Component {
                     < input type ="text" style={{border: "0px"}} class="text-primary" placeholder = "yes" ></input>
                     </div>
                     <div class="col-1">
-                     <a href ="#" class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
+                     <a href ="#" onClick ={() => this.props.onDelete(this.props)}class="btn  "><FontAwesomeIcon icon={faTrash}/></a>
                     </div>
              </div>
   
@@ -585,6 +807,13 @@ class Profile extends Component {
 
 
 {/*Langauge Preffered end*/}
+          <div class="row py-3" >
+             <div class="col col-sm offset-10 ">
+             <button type="submit" onClick={this.handleReset}  class="btn btn-primary btn-sm rounded-pill">Reset Detials</button>
+             </div>
+             </div>
+             </form>
+             
 
             </div>
       
